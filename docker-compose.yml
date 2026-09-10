@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lexirag_service
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET=${JWT_SECRET:-enterprise_legal_rag_super_secret_key_prod}
+      - EMBEDDING_MODEL=gemini-embedding-2-preview
+      - GENERATION_MODEL=gemini-3.8-flash
+      - LLM_MODEL=gemini-3.8-flash
+      - DATABASE_URL=postgresql://legalrag:legalpass@postgres:5432/legalrag_db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - lexirag_network
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: lexirag_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=legalrag
+      - POSTGRES_PASSWORD=legalpass
+      - POSTGRES_DB=legalrag_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U legalrag -d legalrag_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - lexirag_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: lexirag_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - lexirag_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  lexirag_network:
+    driver: bridge

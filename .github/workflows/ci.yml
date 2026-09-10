@@ -1,0 +1,49 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test_and_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Run Typecheck & Lint
+        run: npm run lint
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Start Application in Background for Integration Tests
+        run: |
+          npm start &
+          sleep 4
+
+      - name: Run Healthcheck Script
+        run: ./scripts/healthcheck.sh
+
+      - name: Run Automated API and Security Test Suite
+        run: npm test
+
+      - name: Run RAG Retrieval Evaluation Benchmark
+        run: python3 eval/eval_rag.py

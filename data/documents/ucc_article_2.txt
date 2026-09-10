@@ -1,0 +1,23 @@
+# Uniform Commercial Code (UCC)
+## ARTICLE 2 — SALES
+
+### § 2-201. Formal Requirements; Statute of Frauds
+(1) Except as otherwise provided in this section a contract for the sale of goods for the price of $500 or more is not enforceable by way of action or defense unless there is some writing sufficient to indicate that a contract for sale has been made between the parties and signed by the party against whom enforcement is sought or by his authorized agent or broker. A writing is not insufficient because it omits or incorrectly states a term agreed upon but the contract is not enforceable under this paragraph beyond the quantity of goods shown in such writing.
+
+### § 2-313. Express Warranties by Affirmation, Promise, Description, Sample
+(1) Express warranties by the seller are created as follows:
+(a) Any affirmation of fact or promise made by the seller to the buyer which relates to the goods and becomes part of the basis of the bargain creates an express warranty that the goods shall conform to the affirmation or promise.
+(b) Any description of the goods which is made part of the basis of the bargain creates an express warranty that the goods shall conform to the description.
+
+### § 2-314. Implied Warranty: Merchantability; Usage of Trade
+(1) Unless excluded or modified (Section 2-316), a warranty that the goods shall be merchantable is implied in a contract for their sale if the seller is a merchant with respect to goods of that kind. Under this section the serving for value of food or drink to be consumed either on the premises or elsewhere is a sale.
+(2) Goods to be merchantable must be at least such as:
+(a) pass without objection in the trade under the contract description; and
+(b) in the case of fungible goods, are of fair average quality within the description; and
+(c) are fit for the ordinary purposes for which such goods are used; and
+(d) run, within the variations permitted by the agreement, of even kind, quality and quantity within each unit and among all units involved; and
+(e) are adequately contained, packaged, and labeled as the agreement may require; and
+(f) conform to the promise or affirmations of fact made on the container or label if any.
+
+### § 2-315. Implied Warranty: Fitness for Particular Purpose
+Where the seller at the time of contracting has reason to know any particular purpose for which the goods are required and that the buyer is relying on the seller's skill or judgment to select or furnish suitable goods, there is unless excluded or modified under the next section an implied warranty that the goods shall be fit for such purpose.

@@ -1,0 +1,20 @@
+# California Consumer Privacy Act of 2018 (CCPA / CPRA)
+## TITLE 1.81.5. California Consumer Privacy Act of 2018
+
+### Section 1798.100 - General Duties of Businesses that Collect Personal Information
+(a) A business that controls the collection of a consumer's personal information shall, at or before the point of collection, inform consumers of the following:
+(1) The categories of personal information to be collected and the purposes for which the categories of personal information are collected or used and whether that information is sold or shared.
+(2) If the business collects sensitive personal information, the categories of sensitive personal information to be collected and the purposes for which the categories of sensitive personal information are collected or used and whether that information is sold or shared.
+(3) The length of time the business intends to retain each category of personal information, including sensitive personal information, or if that is not possible, the criteria used to determine that period.
+
+### Section 1798.105 - Consumers' Right to Delete Personal Information
+(a) A consumer shall have the right to request that a business delete any personal information about the consumer which the business has collected from the consumer.
+(b) A business that collects personal information about consumers shall disclose, pursuant to Section 1798.130, the consumer's rights to request the deletion of the consumer's personal information.
+(c) (1) A business that receives a verifiable consumer request from a consumer to delete the consumer's personal information pursuant to subdivision (a) of this section shall delete the consumer's personal information from its records, subject to subdivision (d), and direct any service providers or contractors to delete the consumer's personal information from their records.
+(d) A business or a service provider or contractor is not required to comply with a consumer's request to delete the consumer's personal information if it is reasonably necessary for the business, service provider, or contractor to maintain the consumer's personal information in order to:
+(1) Complete the transaction for which the personal information was collected, fulfill the terms of a written warranty or product recall conducted in accordance with federal law, provide a good or service requested by the consumer, or reasonably anticipated by the consumer within the context of a business's ongoing business relationship with the consumer, or otherwise perform a contract between the business and the consumer.
+(2) Help to ensure security and integrity to the extent the use of the consumer's personal information is reasonably necessary and proportionate for those purposes.
+(3) Debug to identify and repair errors that impair existing intended functionality.
+
+### Section 1798.120 - Consumers' Right to Opt-Out of Sale or Sharing
+(a) A consumer shall have the right, at any time, to direct a business that sells or shares personal information about the consumer to third parties not to sell or share the consumer's personal information. This right may be referred to as the right to opt-out of sale or sharing.

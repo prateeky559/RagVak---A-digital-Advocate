@@ -1,0 +1,6 @@
+{
+  "name": "Legal Document QA RAG",
+  "description": "Production-grade Retrieval-Augmented Generation (RAG) system for querying legal documents with strict citations, safety controls, and admin ingestion.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
